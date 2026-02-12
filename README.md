@@ -1,5 +1,8 @@
 # EC2 Web Server Practice
 
+公開サイト：
+https://mugi-cloud.github.io/ec2-web-practice/
+
 AWS EC2上にWebサーバーを構築し、GitHub Pagesで公開した実践プロジェクトです。
 
 ## 構成
@@ -18,6 +21,12 @@ AWS EC2上にWebサーバーを構築し、GitHub Pagesで公開した実践プ�
 4. index.html作成
 5. GitHubへアップロード
 6. GitHub Pagesで公開
+
+## 使用コマンド（一部）
+
+sudo yum install httpd -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
 
 ## 公開URL
 
@@ -38,3 +47,9 @@ Mugi
 初めてAWS EC2を使用し、Linuxコマンドでサーバー構築を行いました。これまではクラウドの利用経験がなく、課金面への不安もありましたが、実際に操作することでしくみを理解することができました。
 自分でwebサイトを公開できたことで、クラウドサービスへの理解が深まり、学習の楽しさを実感しました。
 また、インスタンス停止することで不要な課金を防げることを学び、クラウドのコスト管理が重要であることも理解しました。
+
+## 今後やる予定のこと
+
+・独自ドメイン設定  
+・HTTPS化（SSL）  
+・Nginx構築  
