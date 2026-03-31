@@ -1,4 +1,7 @@
 # EC2 Web Server Practice
+## 目的
+クラウドエンジニアを目指す中で実際に手を動かして理解を深めるために実施しました。
+また、AWS CLFを合格し、SAAを取得に向けて経験をするべきと考えました。
 
 公開サイト：
 https://mugi-cloud.github.io/ec2-web-practice/
@@ -28,10 +31,6 @@ sudo yum install httpd -y
 sudo systemctl start httpd
 sudo systemctl enable httpd
 
-## 公開URL
-
-https://mugi-cloud.github.io/ec2-web-practice/
-
 ## 学習ポイント
 
 - EC2の基本操作
@@ -49,7 +48,6 @@ Mugi
 また、インスタンス停止することで不要な課金を防げることを学び、クラウドのコスト管理が重要であることも理解しました。
 
 ## 今後やる予定のこと
-
-・独自ドメイン設定  
-・HTTPS化（SSL）  
-・Nginx構築  
+・HTTPSにする
+・S3と連携し性的なコンテンツを作成する
+・Cloud Formationを使いインフラの自動化
