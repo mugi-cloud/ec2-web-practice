@@ -1,53 +1,62 @@
-# EC2 Web Server Practice
-## 目的
-クラウドエンジニアを目指す中で実際に手を動かして理解を深めるために実施しました。
-また、AWS CLFを合格し、SAAを取得に向けて経験をするべきと考えました。
+# AWS EC2 Web Server Project
+
+## 概要
+AWS EC2上にWebサーバー（Apache）を構築し、インターネットからアクセス可能なWebページを公開しました。  
+クラウド環境でのサーバー構築から公開までの一連の流れを実践的に学ぶことを目的としたプロジェクトです。
 
 公開サイト：
 https://mugi-cloud.github.io/ec2-web-practice/
 
-AWS EC2上にWebサーバーを構築し、GitHub Pagesで公開した実践プロジェクトです。
+---
 
 ## 構成
-
 - Cloud：AWS
-- Service：EC2 (t3.micro)
+- Service：EC2（t3.micro）
 - OS：Amazon Linux 2023
 - Web Server：Apache
-- Region：ap-northeast-1 (Tokyo)
+- Region：ap-northeast-1（Tokyo）
 
-## 実施内容
+---
 
+## 実装内容
 1. EC2インスタンス作成
 2. セキュリティグループ設定（HTTP許可）
-3. Apacheインストール・起動
-4. index.html作成
-5. GitHubへアップロード
-6. GitHub Pagesで公開
+3. Apacheのインストールおよび起動
+4. index.html作成・配置
+5. Elastic IPを設定し固定IPで公開
+6. GitHubにコードをアップロード
+7. GitHub Pagesで成果物を公開
 
-## 使用コマンド（一部）
+---
 
-sudo yum install httpd -y  
-sudo systemctl start httpd  
-sudo systemctl enable httpd  
+## 工夫した点
+- **実際に手を動かして環境構築を行った点**
+  - 単なる学習ではなく、Webページ公開まで実施
 
-## 学習ポイント
+- **構成を整理し、第三者が理解しやすい形でまとめた点**
+  - サイト・READMEともに情報を整理
 
-- EC2の基本操作
+- **コストを意識した運用**
+  - 使用後はEC2を停止
+  - Elastic IPを解放し不要な課金を防止
+
+---
+
+## 学習したこと
+- EC2の基本操作（起動・接続・停止）
 - Linuxコマンド操作
 - Webサーバー構築の流れ
-- クラウド環境での公開までの一連の手順
+- クラウド環境での公開手順
+- コスト管理の重要性
+
+---
+
+## 今後の改善
+- HTTPS化（SSL対応）
+- S3と連携した構成への拡張
+- CloudFormationを用いた構成の自動化
+
+---
 
 ## 作成者
-
 Mugi
-
-## 感想
-初めてAWS EC2を使用し、Linuxコマンドでサーバー構築を行いました。これまではクラウドの利用経験がなく、課金面への不安もありましたが、実際に操作することでしくみを理解することができました。
-自分でwebサイトを公開できたことで、クラウドサービスへの理解が深まり、学習の楽しさを実感しました。
-また、インスタンス停止することで不要な課金を防げることを学び、クラウドのコスト管理が重要であることも理解しました。
-
-## 今後やる予定のこと
-・HTTPSにする  
-・S3と連携し性的なコンテンツを作成する  
-・Cloud Formationを使いインフラの自動化  
